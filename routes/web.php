@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'frontend.partial.index');
+Route::view('/about', 'frontend.partial.about')->name('about');
+Route::view('/galery', 'frontend.partial.galery')->name('galery');

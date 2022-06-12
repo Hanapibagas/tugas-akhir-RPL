@@ -23,6 +23,7 @@
                         <li><i class="bx bx-chevron-right"></i> <a href="">Home</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
                         <li><i class="bx bx-chevron-right"></i> <a href="/galery">Galery</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/history">History</a></li>
                     </ul>
                 </div>
 

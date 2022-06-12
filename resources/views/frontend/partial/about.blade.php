@@ -41,34 +41,33 @@
 
 <!-- ======= Team Section ======= -->
 <section id="team" class="team section-bg">
-  <div class="container">
+    <div class="container">
 
-    <div class="section-title">
-      <h2>Daftar</h2>
-      <p>Keluarga Ceotech_</p>
-    </div>
+        <div class="section-title">
+            <h2>Daftar</h2>
+            <p>Pengurus Ceotech_</p>
+        </div>
 
-    <div class="row">
-        <div class="col-lg-6 mt-lg-4">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Hanapi bagas p</h4>
-                <small class="text-secondary">2019020059</small>
-                <span><b>Anggota</b></span>
-                <p>#maronsquad</p>
-              </div>
+        <div class="row">
+            <div class="col-lg-6 mt-lg-4">
+                <div class="member d-flex align-items-start">
+                    <div class="pic">
+                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="member-info">
+                        <h4>Hanapi bagas p</h4>
+                        <small class="text-secondary">2019020059</small>
+                        <span><b>Anggota</b></span>
+                        <p>#maronsquad</p>
+                    </div>
+                </div>
             </div>
-          </div>
+
+        </div>
 
     </div>
-
-  </div>
 </section>
 <!-- End Team Section -->
-
-<!-- ======= Our Skills Section ======= -->
-
 
 </main>
 @endsection

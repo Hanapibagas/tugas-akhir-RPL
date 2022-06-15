@@ -15,10 +15,10 @@ class CreateCreationsTable extends Migration
     {
         Schema::create('creations', function (Blueprint $table) {
             $table->id();
-            $table->string('picture');
             $table->string('cover');
             $table->string('description');
             $table->string('link');
+            $table->string('picture');
             $table->timestamps();
         });
     }

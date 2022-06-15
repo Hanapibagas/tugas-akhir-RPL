@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Creation extends Model
 {
     protected $fillable = [
-        'picture',
         'cover',
         'description',
-        'link'
+        'link',
+        'picture',
     ];
 }

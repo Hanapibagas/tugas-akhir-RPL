@@ -31,7 +31,7 @@
     <!-- Heading -->
 
     <li class="nav-item active">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="{{ route('tampilan-karya') }}">
         <i class="fas fa-fw fa-book"></i>
         <span>Karya Pengurus</span></a>
     </li>

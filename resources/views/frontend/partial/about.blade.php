@@ -49,19 +49,21 @@
         </div>
 
         <div class="row">
+            @foreach ( $positions as $item )
             <div class="col-lg-6 mt-lg-4">
                 <div class="member d-flex align-items-start">
                     <div class="pic">
-                        <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                        <img src="{{ asset ('storage/'.$item->picture) }}" class="img-fluid" alt="">
                     </div>
                     <div class="member-info">
-                        <h4>Hanapi bagas p</h4>
-                        <small class="text-secondary">2019020059</small>
-                        <span><b>Anggota</b></span>
+                        <h4>{{ $item->name }}</h4>
+                        <small class="text-secondary">{{ $item->n_induk }}</small>
+                        <span><b>{{ $item->position }}</b></span>
                         <p>#maronsquad</p>
                     </div>
                 </div>
             </div>
+            @endforeach
 
         </div>
 

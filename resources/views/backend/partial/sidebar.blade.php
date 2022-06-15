@@ -22,7 +22,7 @@
 
     <!-- Heading -->
     <li class="nav-item active">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="{{ route('show-pengurus') }}">
         <i class="fas fa-fw fa-book"></i>
         <span>Daftar Pengurus</span></a>
     </li>

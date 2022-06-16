@@ -12,30 +12,26 @@
 </script>
 @endif
 <div class="row">
-    <a href="{{ route('tabel-karya') }}" class="btn btn-primary">Tambah</a>
+    <a href="{{ route('create-history') }}" class="btn btn-primary">Tambah</a>
 </div>
 <table class="table mt-3">
     <thead>
         <tr>
             <th scope="col">No.</th>
             <th scope="col">Judul</th>
-            <th scope="col">Deskripsi</th>
-            <th scope="col">Link</th>
             <th scope="col">Gambar</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($creations as $key => $item)
+        @foreach ($histories as $key => $item)
         <tr>
             <th scope="row">{{ $key+1 }}</th>
-            <td>{{ $item->cover }}</td>
-            <td>{{ $item->description }}</td>
-            <td>{{ $item->link }}</td>
+            <td>{{ $item->title }}</td>
             <td><img width="50px" height="70px" src="{{ asset ('storage/'.$item->picture) }}" alt="fesfh"></td>
             <td>
-                <a href="{{ route('edit-karya', $item->id) }}" class="btn btn-primary">Edit</a>
-                <form style="display: inline" action="{{ route('destroy-karya', $item->id) }}" method="POST">
+                <a href="{{ route('edit-history', $item->id) }}" class="btn btn-primary">Edit</a>
+                <form style="display: inline" action="{{ route('destroy-history', $item->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger">Hapus</button>

@@ -9,6 +9,6 @@ class History extends Model
 {
     protected $fillable = [
         'title',
-        'cover'
+        'picture'
     ];
 }

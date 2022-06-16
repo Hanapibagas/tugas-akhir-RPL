@@ -11,7 +11,7 @@
           <h2>Karya Pengurus</h2>
           <ol>
             <li><a href="/">Home</a></li>
-            <li>>Karya Pengurus</li>
+            <li>Karya Pengurus</li>
           </ol>
         </div>
 
@@ -32,7 +32,7 @@
                 <h4>{{ $item->cover }}</h4>
                 <p>{{ $item->description }}</p>
                 <div class="portfolio-links">
-                  <a href="{{ asset ('storage/'.$item->picture) }}" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="{{ asset ('storage/'.$item->picture) }}" data-gall="portfolioGallery" class="venobox" title="{{ $item->cover }}"><i class="bx bx-plus"></i></a>
                   <a href="{{ $item->link }}" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>

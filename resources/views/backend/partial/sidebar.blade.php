@@ -40,7 +40,7 @@
     <!-- Heading -->
 
     <li class="nav-item active">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="{{ route('show-history') }}">
         <i class="fas fa-fw fa-book"></i>
         <span>History</span></a>
     </li>

@@ -8,7 +8,7 @@
                 <li class="{{ request()->is('/') ? 'active' : '' }}"><a href="/">Home</a></li>
                 <li class="{{ request()->is('about') ? 'active' : '' }}"><a href="{{ route('about') }}">About</a></li>
                 <li class="{{ request()->is('galery') ? 'active' : '' }}"><a href="{{ route('galery') }}">Galery</a></li>
-                <li class="{{ request()->is('history') ? 'active' : '' }}"><a href="#">History</a></li>
+                <li class="{{ request()->is('history') ? 'active' : '' }}"><a href="{{ route('sejarah') }}">History</a></li>
             </ul>
         </nav>
     </div>

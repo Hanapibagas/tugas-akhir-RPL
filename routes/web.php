@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\CreationController;
+use App\Http\Controllers\Admin\HistoriController;
 use App\Http\Controllers\Admin\PositionController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Frontend\GaleryController;
+use App\Http\Controllers\Frontend\HistoriController as FrontendHistoriController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -21,11 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 // route frontend
 Route::view('/', 'frontend.partial.index');
-Route::view('/galery', 'frontend.partial.galery')->name('galery');
-Route::view('/history', 'frontend.partial.history')->name('history');
-
 Route::get('/about', [AboutController::class, 'show'])->name('about');
 Route::get('/galery', [GaleryController::class, 'show'])->name('galery');
+Route::get('/history', [FrontendHistoriController::class, 'show'])->name('sejarah');
 
 // route beckend
 Route::view('/home', 'backend.layout.index');
@@ -44,3 +44,15 @@ Route::delete('kepengurusan/tambah/{id}', [PositionController::class, 'destroy']
 Route::get('karya/tambah', [CreationController::class, 'create'])->name('tabel-karya');
 Route::get('karya', [CreationController::class, 'show'])->name('tampilan-karya');
 Route::post('karya', [CreationController::class, 'store'])->name('tambah-karya');
+Route::get('karya/tambah/{id}', [CreationController::class, 'edit'])->name('edit-karya');
+Route::put('karya/tambah/{id}', [CreationController::class, 'update'])->name('update-karya');
+Route::delete('karya/tambah/{id}', [CreationController::class, 'destroy'])->name('destroy-karya');
+
+
+// route hitorty
+Route::get('sejarah', [HistoriController::class, 'show'])->name('show-history');
+Route::post('sejarah', [HistoriController::class, 'store'])->name('store-history');
+Route::get('sejarah/tambah', [HistoriController::class, 'create'])->name('create-history');
+Route::get('sejarah/tambah/{id}', [HistoriController::class, 'edit'])->name('edit-history');
+Route::put('sejarah/tambah/{id}', [HistoriController::class, 'update'])->name('update-history');
+Route::delete('sejarah/tambah/{id}', [HistoriController::class, 'destroy'])->name('destroy-history');

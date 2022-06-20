@@ -12,7 +12,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-      <a class="nav-link" href="index.html">
+      <a class="nav-link" href="{{ route('home') }}">
         <i class="fas fa-fw fa-home"></i>
         <span>Dashboard</span></a>
     </li>
@@ -23,7 +23,7 @@
     <!-- Heading -->
     <li class="nav-item active">
       <a class="nav-link" href="{{ route('show-pengurus') }}">
-        <i class="fas fa-fw fa-book"></i>
+        <i class="fas fa-fw fa-sitemap"></i>
         <span>Daftar Pengurus</span></a>
     </li>
 
@@ -32,7 +32,7 @@
 
     <li class="nav-item active">
       <a class="nav-link" href="{{ route('tampilan-karya') }}">
-        <i class="fas fa-fw fa-book"></i>
+        <i class="fas fa-fw fa-upload"></i>
         <span>Karya Pengurus</span></a>
     </li>
 
@@ -41,7 +41,7 @@
 
     <li class="nav-item active">
       <a class="nav-link" href="{{ route('show-history') }}">
-        <i class="fas fa-fw fa-book"></i>
+        <i class="fas fa-fw fa-table"></i>
         <span>History</span></a>
     </li>
 
@@ -49,7 +49,7 @@
 
     <li class="nav-item active">
       <a class="nav-link" href="#">
-        <i class="fas fa-fw fa-book"></i>
+        <i class="fas fa-fw fa-user"></i>
         <span>User</span></a>
     </li>
 

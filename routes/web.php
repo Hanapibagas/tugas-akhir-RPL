@@ -32,6 +32,21 @@ Route::view('/home', 'backend.layout.index');
 Auth::routes();
 Route::get('/admin-ceotech', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::middleware('auth', 'hakakses:IO,FO')->group(function () {
+    // route posution
+    Route::get('kepengurusan', [PositionController::class, 'show'])->name('show-pengurus');
+    Route::get('kepengurusan/tambah', [PositionController::class, 'create'])->name('create-pengurus');
+    Route::post('kepengurusan', [PositionController::class, 'store'])->name('store-pengurus');
+    // route creation
+    Route::get('karya', [CreationController::class, 'show'])->name('tampilan-karya');
+    Route::get('karya/tambah', [CreationController::class, 'create'])->name('tabel-karya');
+    Route::post('karya', [CreationController::class, 'store'])->name('tambah-karya');
+    // route history
+    Route::get('sejarah', [HistoriController::class, 'show'])->name('show-history');
+    Route::get('sejarah/tambah', [HistoriController::class, 'create'])->name('create-history');
+    Route::post('sejarah', [HistoriController::class, 'store'])->name('store-history');
+});
+
 // route position
 Route::get('kepengurusan', [PositionController::class, 'show'])->name('show-pengurus');
 Route::get('kepengurusan/tambah', [PositionController::class, 'create'])->name('create-pengurus');
@@ -39,7 +54,6 @@ Route::post('kepengurusan', [PositionController::class, 'store'])->name('store-p
 Route::get('kepengurusan/tambah/{id}', [PositionController::class, 'edit'])->name('edit-pengurus');
 Route::put('kepengurusan/tambah/{id}', [PositionController::class, 'update'])->name('update-pengurus');
 Route::delete('kepengurusan/tambah/{id}', [PositionController::class, 'destroy'])->name('destroy-pengurus');
-
 // route creation
 Route::get('karya/tambah', [CreationController::class, 'create'])->name('tabel-karya');
 Route::get('karya', [CreationController::class, 'show'])->name('tampilan-karya');
@@ -47,8 +61,6 @@ Route::post('karya', [CreationController::class, 'store'])->name('tambah-karya')
 Route::get('karya/tambah/{id}', [CreationController::class, 'edit'])->name('edit-karya');
 Route::put('karya/tambah/{id}', [CreationController::class, 'update'])->name('update-karya');
 Route::delete('karya/tambah/{id}', [CreationController::class, 'destroy'])->name('destroy-karya');
-
-
 // route hitorty
 Route::get('sejarah', [HistoriController::class, 'show'])->name('show-history');
 Route::post('sejarah', [HistoriController::class, 'store'])->name('store-history');

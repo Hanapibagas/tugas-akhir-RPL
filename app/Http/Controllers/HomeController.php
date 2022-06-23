@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin\Creation;
 use App\Models\Admin\History;
 use App\Models\Admin\Position;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -29,6 +30,7 @@ class HomeController extends Controller
         $positions = Position::all()->count();
         $creations = Creation::all()->count();
         $histories = History::all()->count();
+        // $$users = User::all()->count();
         return view('home', compact('positions', 'creations', 'histories'));
     }
 }
